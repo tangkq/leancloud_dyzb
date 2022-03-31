@@ -8,7 +8,6 @@ import leancloud
 
 engine = Engine()
 
-
 @engine.define
 def get_server_time(**params):
     return int(time.time())
@@ -34,9 +33,12 @@ def match_player_record(**params):
         matches.append(ret)
     return matches
 
+class Todo(leancloud.Object):
+    pass
+
 @engine.define
 def match_todo(**params):
-    query = leancloud.Query("Todo")
+    query = leancloud.Query(Todo)
     query.descending("createdAt")
     query.limit(100)
     results = query.find()
