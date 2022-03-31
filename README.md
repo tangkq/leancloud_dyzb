@@ -1,6 +1,6 @@
-# Flask-getting-started
+# Django-getting-started
 
-A simple Python application based on Flask for LeanEngine Python runtime.
+A simple Python application based on Django for LeanEngine Python runtime.
 
 ## Documentation
 
